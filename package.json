@@ -1,12 +1,12 @@
 {
-  "name": "@askirmas/configs",
+  "name": "@kirmas/configs",
   "version": "0.0.0",
   "private": false,
   "description": "My confis for reuse",
   "scripts": {
-    "release:product": "np $(./ghw semver_inc product)",
-    "release:feature": "np $(./ghw semver_inc feature)",
-    "release:hotfix": "np $(./ghw semver_inc hotfix)",
+    "release:product": "np $(git-hooks-wrapper semver_inc product)",
+    "release:feature": "np $(git-hooks-wrapper semver_inc feature)",
+    "release:hotfix": "np $(git-hooks-wrapper semver_inc hotfix)",
     "release": "np",
     "postrelease": "npm update && npm update -D",
 
