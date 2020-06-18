@@ -1,7 +1,7 @@
 {
   "name": "@kirmas/configs",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "description": "My confis for reuse",
   "scripts": {
     "release:product": "np $(git-hooks-wrapper semver_inc product)",
@@ -9,7 +9,6 @@
     "release:hotfix": "np $(git-hooks-wrapper semver_inc hotfix)",
     "release": "np",
     "postrelease": "npm update && npm update -D",
-
     "prestart": "git config include.path ../.gitconfig",
     "pretest": "jest --clearCache",
     "test": "exit 0",
@@ -19,8 +18,8 @@
     "doc": "mdmerge --version || pip3 install MarkdownTools && mdmerge -o README.md README.template.md",
     "spec:clean": "git clean -fd cypress/**/*.png",
     "postspec": "nyc report",
-    "preversion": "./preversion.sh",
-    "postversion": "git push && git push --tags && git switch master && git merge -X theirs release --no-edit && git push && npm update --dd"
+    "-preversion": "./preversion.sh",
+    "-postversion": "git push && git push --tags && git switch master && git merge -X theirs release --no-edit && git push && npm update --dd"
   },
   "repository": {
     "type": "git",
