@@ -1,0 +1,21 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-microsoft-contrib/recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "array-type": [true, "array-simple"]
+    },
+    "rulesDirectory": [
+        "node_modules/tslint-microsoft-contrib"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "json_schemas",
+            "patterning",
+            "node_modules"
+        ]
+    }
+}

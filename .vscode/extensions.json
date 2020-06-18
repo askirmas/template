@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "andrew-codes.cypress-snippets",
+    "eg2.vscode-npm-script",
+    "gruntfuggly.todo-tree",
+    "JosefBiehler.cypress-fixture-intellisense",
+    "mhutchie.git-graph",
+    "orta.vscode-jest",
+    "ryanluker.vscode-coverage-gutters",
+    "Shelex.vscode-cy-helper",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    "stylelint.vscode-stylelint",
+    "tnrich.vscode-extension-open-cypress",
+    "waderyan.gitblame",
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ]
+}

@@ -1,10 +1,19 @@
 {
   "name": "@askirmas/configs",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My confis for reuse",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "git config include.path ../.gitconfig",
+    "pretest": "jest --clearCache",
+    "test": "exit 0",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:js": "eslint . --ext .js,.jsx,.ts,.tsx --fix --quiet",
+    "lint:css": "stylelint **/*.scss **/*.css --fix --quiet",
+    "doc": "mdmerge --version || pip3 install MarkdownTools && mdmerge -o README.md README.template.md",
+    "spec:clean": "git clean -fd cypress/**/*.png",
+    "postspec": "nyc report",
+    "preversion": "./preversion.sh",
+    "postversion": "git push && git push --tags && git switch master && git merge -X theirs release --no-edit && git push && npm update --dd"
   },
   "repository": {
     "type": "git",
@@ -15,5 +24,44 @@
   "bugs": {
     "url": "https://github.com/askirmas/configs/issues"
   },
-  "homepage": "https://github.com/askirmas/configs#readme"
+  "homepage": "https://github.com/askirmas/configs#readme",
+  "dependencies": {
+    "@mysticatea/eslint-plugin": "^13.0.0",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "eslint": "^7.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-no-use-extend-native": "^0.5.0",
+    "eslint-plugin-optimize-regex": "^1.2.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-unicorn": "^20.1.0",
+    "git-hooks-wrapper": "^0.7.1",
+    "jest": "^26.0.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "np": "^6.2.4",
+    "stylelint-config-sass-guidelines": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@4tw/cypress-drag-drop": ">= 1.3.1",
+    "@babel/plugin-proposal-class-properties": ">= 7.10.1",
+    "@cypress/browserify-preprocessor": ">= 3.0",
+    "@cypress/code-coverage": ">= 3.0",
+    "@zeit/next-css": ">= 1.0.1",
+    "@zeit/next-sass": ">= 1.0.1",
+    "cypress": ">= 4.0",
+    "cypress-plugin-snapshots": ">= 1.0",
+    "istanbul-lib-coverage": ">= 3.0",
+    "next": "9.3.6",
+    "next-images": ">= 1.3.1",
+    "nyc": ">= 15.0"
+  }
 }
