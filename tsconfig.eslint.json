@@ -4,16 +4,13 @@
     "noEmit": true
   },
   "include": [
-    "**/*.def.ts",
+    "**/*.*.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx"
   ],
   "exclude": [
-    "sandbox",
-    "styling",
-    "patterning",
     "cypress",
   ]
 }
