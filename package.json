@@ -1,8 +1,15 @@
 {
   "name": "@askirmas/configs",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "private": false,
   "description": "My confis for reuse",
   "scripts": {
+    "release:product": "np $(./ghw semver_inc product)",
+    "release:feature": "np $(./ghw semver_inc feature)",
+    "release:hotfix": "np $(./ghw semver_inc hotfix)",
+    "release": "np",
+    "postrelease": "npm update && npm update -D",
+
     "prestart": "git config include.path ../.gitconfig",
     "pretest": "jest --clearCache",
     "test": "exit 0",
