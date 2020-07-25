@@ -1,0 +1,14 @@
+{
+  "rules": {
+    "no-loop-func": 0,
+    "newline-per-chained-call": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "no-empty-function": 0,
+    "max-nested-callbacks": 0,
+    "id-length": 0,
+    "no-undef": 0
+  },
+  "env": {
+    "mocha": true
+  }
+}

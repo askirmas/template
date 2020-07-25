@@ -1,18 +1,18 @@
 {
+  "extends": "./cypress_src/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "isolatedModules": false,
-    "baseUrl": "../node_modules",
-    "lib": [
-      "es5",
-      "dom",
-      "dom.iterable",
-    ],
-    "types": [
-      "node",
-      "cypress",
-      "cypress-plugin-snapshots"
-    ],
-    "noEmit": true
-  }
+    "noEmit": false,
+    "resolveJsonModule": true,
+    "rootDir": "cypress_src",
+    "outDir": "cypress",
+    "declaration": true
+  },
+  "include": [
+    "cypress_src/*.json",
+    "cypress_src/**/*.js",
+    "cypress_src/**/*.ts"
+  ],
+  "files": [
+    "cypress_src/.eslintrc.json"
+  ]
 }

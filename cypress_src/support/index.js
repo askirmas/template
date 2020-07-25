@@ -1,4 +1,3 @@
-"use strict";
 // ***********************************************************
 // This example support/index.js is processed and
 // loaded automatically before your test files.
@@ -13,14 +12,15 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-Object.defineProperty(exports, "__esModule", { value: true });
+
 // Import commands.js using ES2015 syntax:
-require("@4tw/cypress-drag-drop");
-require("@cypress/code-coverage/support");
-require("cypress-plugin-snapshots/commands");
-require("./drag-n-drop");
-require("./input");
-require("./visit");
-chai.config.truncateThreshold = 0;
+import '@4tw/cypress-drag-drop'
+import '@cypress/code-coverage/support'
+import 'cypress-plugin-snapshots/commands'
+import './drag-n-drop'
+import './input'
+import './visit'
+
+chai.config.truncateThreshold = 0
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
