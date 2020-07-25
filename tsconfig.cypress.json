@@ -1,18 +1,18 @@
 {
-  "extends": "./cypress_src/tsconfig",
+  "extends": "./src/cypress/tsconfig",
   "compilerOptions": {
     "noEmit": false,
     "resolveJsonModule": true,
-    "rootDir": "cypress_src",
+    "rootDir": "src/cypress",
     "outDir": "cypress",
     "declaration": true
   },
   "include": [
-    "cypress_src/*.json",
-    "cypress_src/**/*.js",
-    "cypress_src/**/*.ts"
+    "src/cypress/*.json",
+    "src/cypress/**/*.js",
+    "src/cypress/**/*.ts"
   ],
   "files": [
-    "cypress_src/.eslintrc.json"
+    "src/cypress/.eslintrc.json"
   ]
 }

@@ -11,8 +11,7 @@
 // ***********************************************************
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-var browserify = require('@cypress/browserify-preprocessor')
-, initPlugin = require('cypress-plugin-snapshots/plugin').initPlugin;
+var browserify = require('@cypress/browserify-preprocessor'), initPlugin = require('cypress-plugin-snapshots/plugin').initPlugin;
 /**
  * @type {Cypress.PluginConfig}
  */

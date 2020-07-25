@@ -1,0 +1,21 @@
+{
+    "video": false,
+    "viewportWidth": 1280,
+    "viewportHeight": 720,
+    "ignoreTestFiles": [
+        "**/__snapshots__/*",
+        "**/__image_snapshots__/*"
+    ],
+    "env": {
+        "cypress-plugin-snapshots": {
+            "autoCleanUp": false,
+            "autopassNewSnapshots": false,
+            "backgroundBlend": "overlay",
+            "updateSnapshots": false,
+            "imageConfig": {
+                "threshold": 0.00,
+                "thresholdType": "percent"
+            }
+        }
+    }
+}

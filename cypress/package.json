@@ -1,0 +1,20 @@
+{
+    "name": "@kirmas/configs-cypress",
+    "version": "1.0.0",
+    "description": "Cypress wrap",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "cypress": "^4.11.0"
+    },
+    "dependencies": {
+        "@4tw/cypress-drag-drop": "^1.4.0",
+        "@cypress/browserify-preprocessor": "^3.0.1",
+        "@cypress/code-coverage": "^3.8.1",
+        "cypress-plugin-snapshots": "^1.4.3",
+        "js-base64": "^2.5.2",
+        "nyc": "^15.1.0"
+    }
+}

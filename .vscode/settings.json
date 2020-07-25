@@ -16,7 +16,7 @@
             "fileMatch": [
                 "cypress.json"
             ],
-            "url": "./cypress.schema.json"
+            "url": "./src/cypress/schema.json"
         },
         {
             "fileMatch": [
