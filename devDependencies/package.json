@@ -19,6 +19,7 @@
     "eslint": "^7.5.0",
     "istanbul-lib-coverage": "^3.0.0",
     "jest": "^26.1.0",
+    "js-base64": "^2.5.2",
     "next": "^9.4.4",
     "next-images": "^1.4.0",
     "np": "^6.3.2",
