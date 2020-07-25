@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "../node_modules",
+    // "target": "es5",
+    "allowJs": true,
+    "isolatedModules": false,
+    "downlevelIteration": true,
+    "lib": [
+      "es5",
+      "dom",
+      "dom.iterable",
+    ],
+    "types": [
+      // "node",
+      "cypress",
+      "cypress-plugin-snapshots"
+    ],
+    "noEmit": true
+  },
+  "include": [
+    "**/*.ts"
+  ]  
+}
