@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "$ref": "https://on.cypress.io/cypress.schema.json",
   "properties": {
     "env": {
       "type": "object",

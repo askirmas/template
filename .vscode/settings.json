@@ -17,6 +17,12 @@
                 "cypress.json"
             ],
             "url": "./cypress.schema.json"
+        },
+        {
+            "fileMatch": [
+                "cypress.json"
+            ],
+            "url": "https://on.cypress.io/cypress.schema.json"
         }
     ],
     "cSpell.words": [
