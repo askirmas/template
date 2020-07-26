@@ -43,6 +43,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.10.4",
     "@kirmas/configs-cypress": "file:cypress",
     "@kirmas/configs-dev": "file:devDependencies",
+    "@kirmas/configs-next": "file:next",
     "@mysticatea/eslint-plugin": "^13.0.0",
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
