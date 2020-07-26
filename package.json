@@ -13,14 +13,11 @@
     "url": "https://github.com/askirmas/configs/issues"
   },
   "homepage": "https://github.com/askirmas/configs#readme",
-  "files": [
-    "cypress",
-    "cypress.json"
-  ],
+  "files": [],
   "scripts": {
     "modules.clear": "find * -type d -iname node_modules | xargs -d'\n' -I{} rm -rf {}",
     "precompile/cypress": "rm -rf cypress",
-    "compile/cypress": "tsc --project tsconfig.cypress.json",
+    "compile/cypress": "cd src/cypress && npm run compile --outDir $PWD/cypress",
     "release:product": "np $(git-hooks-wrapper semver_inc product)",
     "release:feature": "np $(git-hooks-wrapper semver_inc feature)",
     "release:hotfix": "np $(git-hooks-wrapper semver_inc hotfix)",
@@ -42,13 +39,9 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.4",
     "@babel/plugin-proposal-optional-chaining": "^7.10.4",
-    "@kirmas/configs-cypress": "file:cypress",
-    "@kirmas/configs-dev": "file:devDependencies",
-    "@kirmas/configs-next": "file:next",
     "@mysticatea/eslint-plugin": "^13.0.0",
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
-    "@types/react": "^16.9.43",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-optimize-regex": "^1.2.0",
@@ -56,12 +49,10 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-unicorn": "^20.1.0",
-    "git-hooks-wrapper": "^0.7.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
     "ts-jest": "^26.1.0"
   },
   "devDependencies": {},
-  "peerDependencies": {
-  }
+  "peerDependencies": {}
 }

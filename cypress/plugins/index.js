@@ -11,7 +11,7 @@
 // ***********************************************************
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-var browserify = require('@cypress/browserify-preprocessor'), initPlugin = require('cypress-plugin-snapshots/plugin').initPlugin;
+var browserify = require('@cypress/browserify-preprocessor'), initPlugin = require('cypress-plugin-snapshots/plugin').initPlugin, addMatchImageSnapshotPlugin = require('cypress-image-snapshot/plugin').addMatchImageSnapshotPlugin, getCompareSnapshotsPlugin = require('cypress-visual-regression/dist/plugin');
 /**
  * @type {Cypress.PluginConfig}
  */
@@ -26,6 +26,8 @@ module.exports = function (on, config) {
     // on('file:preprocessor', require('@cypress/code-coverage/use-babelrc'))
     // options.browserifyOptions.transform[1][1].babelrc = true
     initPlugin(on, config);
+    getCompareSnapshotsPlugin(on);
+    addMatchImageSnapshotPlugin(on, config);
     require('@cypress/code-coverage/task')(on, config);
     var w = config.viewportWidth, h = config.viewportHeight;
     on('before:browser:launch', function (browser, launchOptions) {

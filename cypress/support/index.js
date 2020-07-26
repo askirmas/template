@@ -21,6 +21,17 @@ require("cypress-plugin-snapshots/commands");
 require("./drag-n-drop");
 require("./input");
 require("./visit");
+var command_1 = require("cypress-image-snapshot/command");
+var compareSnapshotCommand = require('cypress-visual-regression/dist/command');
+command_1.addMatchImageSnapshotCommand({
+    failureThreshold: 0.00,
+    failureThresholdType: 'percent',
+    customDiffConfig: { threshold: 0 },
+    capture: 'viewport',
+});
+compareSnapshotCommand({
+    errorThreshold: 0
+});
 chai.config.truncateThreshold = 0;
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

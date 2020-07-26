@@ -16,6 +16,10 @@
         "threshold": 0.00,
         "thresholdType": "percent"
       }
-    }
-  }
+    },
+    "updateSnapshots": false,
+    "failOnSnapshotDiff": true
+  },
+  "screenshotsFolder": "./cypress/snapshots/actual",
+  "trashAssetsBeforeRuns": true
 }

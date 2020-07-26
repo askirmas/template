@@ -21,6 +21,21 @@ import './drag-n-drop'
 import './input'
 import './visit'
 
+import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+
+const compareSnapshotCommand = require('cypress-visual-regression/dist/command')
+
+addMatchImageSnapshotCommand({
+  failureThreshold: 0.00, // threshold for entire image
+  failureThresholdType: 'percent', // percent of image or number of pixels
+  customDiffConfig: { threshold: 0 }, // threshold for each pixel
+  capture: 'viewport', // capture viewport in screenshot  
+});
+
+compareSnapshotCommand({
+  errorThreshold: 0
+})
+
 chai.config.truncateThreshold = 0
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
