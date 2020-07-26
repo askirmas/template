@@ -9,7 +9,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^4.11.0",
     "eslint": "^7.5.0",
     "istanbul-lib-coverage": "^3.0.0",
     "jest": "^26.1.0",
