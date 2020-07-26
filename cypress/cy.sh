@@ -22,5 +22,5 @@ if [ ! -z "$npm_config_dev" ]; then
   OPTS+=('--config' "baseUrl=http://localhost:${PORT:-3000}/")
 fi
 
-cypress ${OPTS[@]}
+cypress ${OPTS[@]} --env failOnSnapshotDiff=true
 exit $?
