@@ -5,6 +5,7 @@
   "files": [
     "plugins",
     "support",
+    "@types",
     "tsconfig.json",
     "config.json",
     ".eslintrc.json",
@@ -14,9 +15,12 @@
     "cy": "cy.sh"
   },
   "scripts": {
+    "compile": "npm run compile--dry",
     "precompile": "rm -rf dist plugins support",
-    "compile": "tsc --project tsconfig.compile.json",
-    "postcompile": "mv dist/plugins . && mv dist/support ."
+    "compile--dry": "tsc --project tsconfig.compile.json",
+    "postcompile": "npm run copy-declarations && npm run move-dist",
+    "copy-declarations": "cd src && git ls-files '**/*.d.ts' | xargs -d'\n' -I{} cp -f {} ../dist/{} && cd ..",
+    "move-dist": "mv dist/plugins . && mv dist/support ."
   },
   "keywords": [],
   "author": "",
@@ -26,6 +30,7 @@
     "@4tw/cypress-drag-drop": "^1.4.0",
     "@cypress/browserify-preprocessor": "^3.0.1",
     "@cypress/code-coverage": "^3.8.1",
+    "@types/jest-image-snapshot": "^3.1.0",
     "cypress": "^4.11.0",
     "cypress-image-snapshot": "^3.1.1",
     "cypress-plugin-snapshots": "^1.4.3",
