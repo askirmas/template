@@ -12,7 +12,7 @@ else
   OPTS+=('run' '--headless' '--browser' "$npm_config_run")
   cmd="run"
   if [ ! -z "$npm_config_spec" ]; then
-     OPTS+=('--spec' "cypress/integrations/$npm_config_spec")
+     OPTS+=('--spec' "cypress/integration/$npm_config_spec")
   fi
 fi 
 
