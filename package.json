@@ -41,7 +41,8 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.4",
     "@babel/plugin-proposal-optional-chaining": "^7.10.4",
-    "@kirmas/configs-cypress": "file:src/cypress",
+    "@kirmas/configs-cypress": "file:cypress",
+    "@kirmas/configs-dev": "file:devDependencies",
     "@mysticatea/eslint-plugin": "^13.0.0",
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
@@ -58,9 +59,7 @@
     "stylelint-order": "^4.1.0",
     "ts-jest": "^26.1.0"
   },
-  "devDependencies": {
-    "@kirmas/configs-dev": "file:devDependencies"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "@4tw/cypress-drag-drop": ">= 1.3.1",
     "@cypress/browserify-preprocessor": ">= 3.0",
