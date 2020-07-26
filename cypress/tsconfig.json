@@ -8,12 +8,11 @@
     "isolatedModules": false,
     "downlevelIteration": true,
     "lib": [
-      "es5",
+      "es6",
       "dom",
-      "dom.iterable",
+      "dom.iterable"
     ],
     "types": [
-      // "node",
       "cypress",
       "cypress-plugin-snapshots"
     ],
