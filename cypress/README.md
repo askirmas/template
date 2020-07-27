@@ -23,14 +23,14 @@ Easy launcher with minimum parameters.
 # Open dashboard
 npm run spec
 # Run 2 suites on localhost in chrome
-npm run spec --dev=1 --run=chrome --spec=test1.js -- --spec="cypress/integration/test2.js"
+npm run spec --dev=1 --run=chrome --spec=test1 -- --spec="cypress/integration/test2.js"
 ```
 
 #### Parameters
 
 - `--run=<browser>` Sets to run some browser in headless mode. If omitted opens Cypress dashboard
 - `--dev=1` Overrides `baseUrl` with `localhost:$PORT` (default 3000). Interacts with `cy.visit`
-- `--spec=<fileName>` Propagates to original `--spec` option with default prefixed suites directory *cypress/integration/*.
+- `--spec=<fileName>` Propagates to original `--spec` option with prefix as default suites directory *cypress/integration/* and any extension.
 
 ### `cy_png`
 
