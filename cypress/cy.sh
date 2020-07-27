@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# As command as seperate bash script 
 #TODO --run=init: ...
 #TODO --run=clean: "git clean -fd cypress/**/*.png",
 
@@ -16,11 +17,12 @@ else
   fi
 fi 
 
+#TODO $npm_config_config_file
 OPTS+=('--config-file' 'node_modules/@kirmas/template-cypress/config.json')
 
 if [ ! -z "$npm_config_dev" ]; then
   OPTS+=('--config' "baseUrl=http://localhost:${PORT:-3000}/")
 fi
 
-cypress ${OPTS[@]} --env failOnSnapshotDiff=true
+cypress ${OPTS[@]} #--env failOnSnapshotDiff=true
 exit $?

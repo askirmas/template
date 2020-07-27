@@ -8,11 +8,11 @@
     "@types",
     "tsconfig.json",
     "config.json",
-    ".eslintrc.json",
-    "cy.sh"
+    ".eslintrc.json"
   ],
   "bin": {
-    "cy": "cy.sh"
+    "cy": "cy.sh",
+    "cy_png": "cy_png.sh"
   },
   "scripts": {
     "compile": "npm run compile--dry",
@@ -30,11 +30,8 @@
     "@4tw/cypress-drag-drop": "^1.4.0",
     "@cypress/browserify-preprocessor": "^3.0.1",
     "@cypress/code-coverage": "^3.8.1",
-    "@types/jest-image-snapshot": "^3.1.0",
     "cypress": "^4.11.0",
-    "cypress-image-snapshot": "^3.1.1",
     "cypress-plugin-snapshots": "^1.4.3",
-    "cypress-visual-regression": "^1.4.0",
     "js-base64": "2.5.2",
     "nyc": "^15.1.0"
   }

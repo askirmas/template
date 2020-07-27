@@ -14,8 +14,8 @@
 
 const browserify = require('@cypress/browserify-preprocessor')
 , {initPlugin} = require('cypress-plugin-snapshots/plugin')
-, {addMatchImageSnapshotPlugin} = require('cypress-image-snapshot/plugin')
-, getCompareSnapshotsPlugin = require('cypress-visual-regression/dist/plugin');
+// , {addMatchImageSnapshotPlugin} = require('cypress-image-snapshot/plugin')
+// , getCompareSnapshotsPlugin = require('cypress-visual-regression/dist/plugin');
  
 /**
  * @type {Cypress.PluginConfig}
@@ -35,8 +35,8 @@ module.exports = (on, config) => {
   // options.browserifyOptions.transform[1][1].babelrc = true
 
   initPlugin(on, config)
-  getCompareSnapshotsPlugin(on)
-  addMatchImageSnapshotPlugin(on, config)
+  // getCompareSnapshotsPlugin(on)
+  // addMatchImageSnapshotPlugin(on, config)
 
   require('@cypress/code-coverage/task')(on, config)
 
