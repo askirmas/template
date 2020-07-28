@@ -4,6 +4,6 @@ declare namespace Cypress {
         drag: (targetSelector: string, options?: Partial<{
             /** @default "top" */
             position: PositionType;
-        } & Forceable>) => Cypress.Chainable<boolean>;
+        } & Forceable>) => Cypress.Chainable<Element>;
     }
 }

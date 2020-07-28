@@ -9,7 +9,7 @@ declare namespace Cypress {
         /** @default "top" */
         position: PositionType
       } & Forceable>
-    ) => Cypress.Chainable<boolean>
+    ) => Cypress.Chainable<Element>
   }
 }
 
@@ -18,4 +18,5 @@ Cypress.Commands.overwrite('drag', (fn, el: JQuery<HTMLElement>, opts: unknown) 
   fn(el, opts)
   .wrap(el)
   .trigger('dragend', {force: true})
+  .wrap(el)
 )

@@ -5,5 +5,6 @@
 Cypress.Commands.overwrite('drag', function (fn, el, opts) {
     return fn(el, opts)
         .wrap(el)
-        .trigger('dragend', { force: true });
+        .trigger('dragend', { force: true })
+        .wrap(el);
 });

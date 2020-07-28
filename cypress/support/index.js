@@ -22,6 +22,7 @@ require("cypress-plugin-snapshots/commands");
 require("./drag-n-drop");
 require("./input");
 require("./visit");
+require("./scrollIntoCenter");
 // import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 // const compareSnapshotCommand = require('cypress-visual-regression/dist/command')
 // addMatchImageSnapshotCommand({

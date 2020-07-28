@@ -21,6 +21,7 @@ import 'cypress-plugin-snapshots/commands'
 import './drag-n-drop'
 import './input'
 import './visit'
+import './scrollIntoCenter'
 
 // import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 
