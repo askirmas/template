@@ -6,8 +6,7 @@
     "target": "ES5",
     "resolveJsonModule": true,
     "outDir": "dist",
-    "rootDir": "src",
-    "declaration": true
+    "rootDir": "src"
   },
   "include": [
     "src/**/*.js",

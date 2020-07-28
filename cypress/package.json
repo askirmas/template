@@ -15,9 +15,10 @@
     "cy_png": "cy_png.sh"
   },
   "scripts": {
-    "compile": "npm run compile--dry",
+    "compile": "npm-run-all compile/*",
     "precompile": "rm -rf dist plugins support",
-    "compile--dry": "tsc --project tsconfig.compile.json",
+    "compile/js": "tsc --project tsconfig.compile.json",
+    "compile/declarations": "tsc --project tsconfig.compile-declarations.json",
     "postcompile": "npm run copy-declarations && npm run move-dist",
     "copy-declarations": "cd src && git ls-files '**/*.d.ts' | xargs -d'\n' -I{} cp -f {} ../dist/{} && cd ..",
     "move-dist": "mv dist/plugins . && mv dist/support ."
