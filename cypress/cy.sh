@@ -6,23 +6,32 @@
 
 OPTS=()
 
-if [ -z "$npm_config_run" ];
+if [ ${npm_config_run:-0} == 0 ];
 then
   OPTS+=('open')
 else
-  OPTS+=('run' '--headless' '--browser' "$npm_config_run")
-  cmd="run"
-  if [ ! -z "$npm_config_spec" ]; then
-     OPTS+=('--spec' "cypress/integration/$npm_config_spec.*")
+  OPTS+=('run' '--browser' "$npm_config_run")
+
+  if [ ${npm_config_hed:-0} == 0 ]
+  then 
+    head="--headless"
+  else
+    head="--headed"
+  fi
+
+  OPTS+=("$head")
+
+  if [ ${npm_config_spec:-0} -ne 0 ]; then
+    OPTS+=('--spec' "cypress/integration/$npm_config_spec.*")
   fi
 fi 
 
 #TODO $npm_config_config_file
 OPTS+=('--config-file' 'node_modules/@kirmas/template-cypress/config.json')
 
-if [ ! -z "$npm_config_dev" ]; then
+if [ ${npm_config_dev:-0} -ne 0 ]; then
   OPTS+=('--config' "baseUrl=http://localhost:${PORT:-3000}/")
 fi
 
-cypress ${OPTS[@]} #--env failOnSnapshotDiff=true
+cypress ${OPTS[@]} "$@" #--env failOnSnapshotDiff=true
 exit $?

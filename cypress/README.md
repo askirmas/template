@@ -6,7 +6,14 @@
 
 ### `cy`
 
-Easy launcher with minimum parameters.
+Easy launcher with minimum and minimized parameters. Argument `=0` treated same as <u>omitted</u>.
+
+#### Parameters
+
+- `--run=<browser>` Sets to run some browser. If omitted opens Cypress dashboard
+- `--dev=1` Overrides `baseUrl` with `localhost:$PORT` (default 3000). Interacts with `cy.visit`
+- `--spec=<fileName>` Propagates to original `--spec` option with prefix as default suites directory *cypress/integration/* and any extension.
+- `--hed=<0|...>` `--headless` or `--headness`. **NOTE** `--head` reserved by `npm` therefore this argument mangled without **A** as **HE**a**D**
 
 #### Usage
 
@@ -14,7 +21,11 @@ Easy launcher with minimum parameters.
 // package.json
 {
     "scripts": {
-        "spec": "cy"
+        // If needed - add arguments propagation
+        "spec": "npm run spec/firefox -- $@ && npm run spec/chrome -- $@",
+        "spec/firefox": "npm run cy --run=firefox -- $@",
+        "spec/chrome": "npm run cy --run=chrome -- $@",
+        "cy": "cy $@"
     }
 }
 ```
@@ -23,14 +34,8 @@ Easy launcher with minimum parameters.
 # Open dashboard
 npm run spec
 # Run 2 suites on localhost in chrome
-npm run spec --dev=1 --run=chrome --spec=test1 -- --spec="cypress/integration/test2.js"
+npm run spec --dev=1 --run=chrome --spec=test1 --hed=0 -- --spec="cypress/integration/test2.js"
 ```
-
-#### Parameters
-
-- `--run=<browser>` Sets to run some browser in headless mode. If omitted opens Cypress dashboard
-- `--dev=1` Overrides `baseUrl` with `localhost:$PORT` (default 3000). Interacts with `cy.visit`
-- `--spec=<fileName>` Propagates to original `--spec` option with prefix as default suites directory *cypress/integration/* and any extension.
 
 ### `cy_png`
 
