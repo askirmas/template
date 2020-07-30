@@ -14,18 +14,16 @@
         },
         {
             "fileMatch": [
-                "cypress/config.json"
+                "cypress.json"
             ],
             "url": "./cypress/schema.json"
         },
         {
             "fileMatch": [
-                "cypress/config.json"
+                "cypress.json"
             ],
             "url": "https://on.cypress.io/cypress.schema.json"
         }
-    ],
-    "cSpell.words": [
     ],
     "files.watcherExclude": {
         "**/.git/objects/**": true,
@@ -61,5 +59,8 @@
     "css.validate": false,
     "less.validate": false,
     "scss.validate": false,
-    "typescript.tsdk": "node_modules/typescript/lib"
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "cSpell.words": [
+    ],
+    "json.schemaDownload.enable": true
 }

@@ -27,7 +27,7 @@ else
 fi 
 
 #TODO $npm_config_config_file
-OPTS+=('--config-file' 'node_modules/@kirmas/template-cypress/config.json')
+OPTS+=('--config-file' 'node_modules/@kirmas/template-cypress/cypress.json')
 
 if [ ! -z "$npm_config_dev" ] && [ "$npm_config_dev" != "0" ]; then
   OPTS+=('--config' "baseUrl=http://localhost:${PORT:-3000}/")

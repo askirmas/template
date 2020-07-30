@@ -7,7 +7,7 @@
     "support",
     "@types",
     "tsconfig.json",
-    "config.json",
+    "cypress.json",
     ".eslintrc.json"
   ],
   "bin": {
