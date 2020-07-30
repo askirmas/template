@@ -20,6 +20,6 @@
     "updateSnapshots": false,
     "failOnSnapshotDiff": true
   },
-  "screenshotsFolder": "./cypress/snapshots/actual",
-  "trashAssetsBeforeRuns": true
+  "screenshotsFolder": "./cypress/integration/__image_snapshots__",
+  "trashAssetsBeforeRuns": false
 }
