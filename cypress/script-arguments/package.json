@@ -1,0 +1,9 @@
+{
+  "name": "npm-scripts-arguments",
+  "version": "0.0.0",
+  "scripts": {
+    "echo": "echo \"head=$npm_config_head production=$npm_config_production dev=$npm_config_dev @=$@\"",
+    "echo-demo": "npm run echo --head=abc --production --dev --dev=2 --production=3"
+  },
+  "license": "MIT"
+}
