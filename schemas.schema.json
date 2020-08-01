@@ -1,6 +1,7 @@
 {
   "title": "Schemas pack for reuse",
   "type": ["array", "object"],
+  "properties": {"$schema": {"type": "string"}},
   "additionalProperties": {
     "$ref": "http://json-schema.org/draft-07/schema"
   },
