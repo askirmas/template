@@ -2,9 +2,17 @@
     "json.schemas": [
         {
             "fileMatch": [
-                "/*.schema.*json", "/schema.json"
+                "*.schema.*json",
+                "schema.json"
             ],
             "url": "http://json-schema.org/draft-07/schema"
+        },
+        {
+            "fileMatch": [
+                "*.schemas.*json",
+                "schemas.json"
+            ],
+            "url": "./schemas.schema.json"
         },
         {
             "fileMatch": [
