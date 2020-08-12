@@ -31,6 +31,12 @@
                 "cypress.json"
             ],
             "url": "https://on.cypress.io/cypress.schema.json"
+        },
+        {
+          "fileMatch": [
+            "nodemon.json"
+          ],
+          "url": "https://json.schemastore.org/nodemon"
         }
     ],
     "files.watcherExclude": {
