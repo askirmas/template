@@ -5,11 +5,12 @@
     "alwaysStrict": true,
     "checkJs": true,
     "downlevelIteration": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": false,
-
-    "keyofStringsOnly": false,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "pretty": true,
+    "keyofStringsOnly": true,
     "lib": [
       "dom.iterable",
       "esnext"
