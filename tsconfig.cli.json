@@ -1,35 +1,46 @@
 {
   "display": "CLI",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "alwaysStrict": true,
-    "checkJs": true,
-    "downlevelIteration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "es5",
+    "module": "CommonJS",
     "isolatedModules": true,
-    "experimentalDecorators": true,
-    "pretty": true,
-    "keyofStringsOnly": true,
+    "moduleResolution": "node",
     "lib": [
       "dom.iterable",
       "esnext"
     ],
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "noEmit": true,
+    "types": [
+      "node"
+    ],
+    "resolveJsonModule": true,
+
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveSymlinks": true,
+
+    "strict": true,
+    "alwaysStrict": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "es5",
-    "types": [
-      "node"
-    ]
+
+    "downlevelIteration": true,
+    "keyofStringsOnly": true,
+
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    "preserveConstEnums": true,
+    "stripInternal": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    
+    "pretty": true,
+
+    "noEmit": true,    
+    "sourceMap": true
   },
   "exclude": [
     "node_modules"
