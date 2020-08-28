@@ -1,4 +1,5 @@
 {
+  "display": "NextJs",
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,

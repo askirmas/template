@@ -1,4 +1,5 @@
 {
+  "display": "CLI",
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
