@@ -5,6 +5,7 @@
         "**/*.test.js",
         "**/*.spec.js",
         "**/*.test.ts",
-        "**/*.spec.ts"
+        "**/*.spec.ts",
+        "**/__tests__"
     ]
 }
