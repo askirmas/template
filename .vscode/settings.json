@@ -16,25 +16,25 @@
         },
         {
             "fileMatch": [
-                "jest.config.json"
+                "jest.config.*json"
             ],
             "url": "https://askirmas.github.io/jest.schema.json"
         },
         {
             "fileMatch": [
-                "cypress.json"
+                "cypress.*json"
             ],
             "url": "./cypress/schema.json"
         },
         {
             "fileMatch": [
-                "cypress.json"
+                "cypress.*json"
             ],
             "url": "https://on.cypress.io/cypress.schema.json"
         },
         {
           "fileMatch": [
-            "nodemon.json"
+            "nodemon.*json"
           ],
           "url": "https://json.schemastore.org/nodemon"
         }
