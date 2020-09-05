@@ -64,7 +64,13 @@
         "errFile": {
           "$ref": "#/definitions/relative",
           "examples": ["/home/myuser/logs/error.log"]
-        } 
+        },
+        "command": {
+          "type": "string",
+          "examples": [
+            "ts-node-script"
+          ]
+        }
       }
     },
     "relative": {
