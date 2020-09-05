@@ -37,7 +37,14 @@
             "nodemon.*json"
           ],
           "url": "https://json.schemastore.org/nodemon"
-        }
+        },
+        {
+          "fileMatch": [
+            "forever.*.json",
+            "*.forever.*json"
+          ],
+          "url": "./forever.schema.json"
+        }    
     ],
     "files.watcherExclude": {
         "**/.git/objects/**": true,

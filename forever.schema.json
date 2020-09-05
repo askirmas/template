@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "title": "https://www.npmjs.com/package/forever#json-configuration-files",
+  "oneOf": [
+    {"$ref": "#/definitions/App"},
+    {
+      "type": "array",
+      "items": {"$ref": "#/definitions/App"}  
+    }    
+  ],
+  "definitions": {
+    "Actions": {
+      "start": "Start SCRIPT as a daemon",
+      "stop": "Stop the daemon SCRIPT by Id|Uid|Pid|Index|Script",
+      "stopall": "Stop all running forever scripts",
+      "restart": "Restart the daemon SCRIPT",
+      "restartall": "Restart all running forever scripts",
+      "list": "List all running forever scripts",
+      "config": "Lists all forever user configuration",
+      "set <key> <val>": "Sets the specified forever config <key>",
+      "clear <key>": "Clears the specified forever config <key>",
+      "logs": "Lists log files for all forever processes",
+      "logs <script|index>": "Tails the logs for <script|index>",
+      "columns add <col>": "Adds the specified column to the output in `forever list`. Supported columns: 'uid', 'command', 'script', 'forever', 'pid', 'id', 'logfile', 'uptime'",
+      "columns rm <col>": "Removed the specified column from the output in `forever list`",
+      "columns set <cols>": "Set all columns for the output in `forever list`",
+      "cleanlogs": "[CAREFUL] Deletes all historical forever log files"
+    },
+    "App": {
+      "type": "object",
+      "required": ["uid", "script"],
+      "properties": {
+        "uid": {
+          "type": "string",
+          "title": "Process uid, useful as a namespace for processes (must wrap in a string)",
+          "description": "e.g. `forever start --uid \"production\" app.js` `forever stop production`",
+          "examples": ["app"]
+        },
+        "args": {
+          "type": "array",
+          "items": {"type": ["string", "number", "null", "boolean"]}
+        },
+        "append": {"title": "Append logs","type": "boolean", "examples": [true]},
+        "watch": {"type": "boolean", "examples": [true]},
+        "script": {
+          "$ref": "#/definitions/relative",
+          "examples": ["index.js"]
+        },
+        "sourceDir": {
+          "title": "The source directory for which SCRIPT is relative to", 
+          "$ref": "#/definitions/relative",
+          "examples": ["/home/myuser/app"]
+        },
+        "logFile": {
+          "title": "Logs the forever output to LOGFILE",
+          "description": "`-l LOGFILE`",
+          "$ref": "#/definitions/relative",
+          "examples": ["/home/myuser/logs/forever.log"]
+        },
+        "outFile": {
+          "$ref": "#/definitions/relative",
+          "examples": ["/home/myuser/logs/out.log"]
+        },
+        "errFile": {
+          "$ref": "#/definitions/relative",
+          "examples": ["/home/myuser/logs/error.log"]
+        } 
+      }
+    },
+    "relative": {
+      "type": "string",
+      "format": "uri-reference"
+    }
+  }
+}
