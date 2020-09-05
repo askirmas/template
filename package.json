@@ -32,7 +32,10 @@
     "spec:clean": "git clean -fd cypress/**/*.png",
     "postspec": "nyc report",
     "-preversion": "./preversion.sh",
-    "-postversion": "git push && git push --tags && git switch master && git merge -X theirs release --no-edit && git push && npm update --dd"
+    "-postversion": "git push && git push --tags && git switch master && git merge -X theirs release --no-edit && git push && npm update --dd",
+    "mongo@mac.start": "brew services start mongodb-community",
+    "mongo@mac.stop": "brew services stop mongodb-community",
+    "mongo@mac.restart": "brew services restart mongodb-community"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
