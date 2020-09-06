@@ -16,6 +16,7 @@
         },
         {
             "fileMatch": [
+                "jest.json",
                 "jest.config.*json"
             ],
             "url": "https://askirmas.github.io/jest.schema.json"
