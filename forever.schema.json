@@ -70,6 +70,10 @@
           "examples": [
             "ts-node-script"
           ]
+        },
+        "fifo": {
+          "type": "boolean",
+          "title": "Stream logs to stdout"
         }
       }
     },
