@@ -45,7 +45,9 @@ function its<F extends Fn>(
       ? "toStrictEqual"
       : "toBe"
     ](
-      output
+      output === null
+      ? undefined
+      : output
     )
   }))
 }
