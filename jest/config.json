@@ -1,27 +1,29 @@
 {
-    "clearMocks": false,
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-        "**/*.[tj]s"
-    ],
-    "coverageThreshold": {
-        "global": {
-            "branches": 100,
-            "functions": 100,
-            "lines": 100,
-            "statements": 100
-        }
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.[tj]sx?$",
-    "transform": {
-        "\\.[tj]sx?$": "ts-jest"
-    },
-    "bail": 1,
-    "verbose": true,
-    "globals": {
-        "ts-jest": {
-            "tsConfig": "tsconfig.json"
-        }
-    },
-    "testEnvironment": "node"
+  "clearMocks": false,
+  "collectCoverage": true,
+  "coverageThreshold": {
+    "global": {
+      "statements": 100,
+      "branches": 100,
+      "functions": 100,
+      "lines": 100
+    }
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.[tj]sx?$",
+  "verbose": true,
+  "bail": 1,
+  "testEnvironment": "node",
+  "projects": [
+    {
+      "displayName": "functions",
+      "preset": "ts-jest",
+      "collectCoverageFrom": [
+        "<rootDir>"
+      ],
+      "rootDir": "functions",
+      "transform": {
+        "^.+\\.[tj]sx?$": "ts-jest"
+      }    
+    }
+  ]
 }
