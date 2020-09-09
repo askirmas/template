@@ -23,6 +23,12 @@
             "url": "https://askirmas.github.io/jest.schema.json"
         },
         {
+          "fileMatch": [
+            "*.coverage.json"
+          ],
+          "url": "https://askirmas.github.io/jest.schema.json#/properties/coverageThreshold"
+        },
+        {
             "fileMatch": [
                 "cypress.*json"
             ],
