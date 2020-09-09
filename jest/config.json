@@ -16,25 +16,19 @@
   "projects": [
     {
       "displayName": "functions",
-      "preset": "ts-jest",
+      "rootDir": "functions",
+      "preset": "ts-jest/presets/js-with-ts",
       "collectCoverageFrom": [
         "<rootDir>"
-      ],
-      "rootDir": "functions",
-      "transform": {
-        "^.+\\.[tj]sx?$": "ts-jest"
-      }    
+      ]
     },
     {
       "displayName": "server",
       "rootDir": "server",
-      "preset": "ts-jest",
+      "preset": "ts-jest/presets/js-with-ts",
       "collectCoverageFrom": [
         "<rootDir>"
       ],
-      "transform": {
-        "^.+\\.[tj]sx?$": "ts-jest"
-      },
       "testEnvironment": "node"
     },
     {
