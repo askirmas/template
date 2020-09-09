@@ -24,6 +24,32 @@
       "transform": {
         "^.+\\.[tj]sx?$": "ts-jest"
       }    
-    }
+    },
+    {
+      "displayName": "db@memory",
+      "rootDir": "db",
+      "transform": {
+        "^.+\\.[tj]sx?$": "ts-jest"
+      },    
+      "globals": {
+        "ts-jest": {
+          "tsConfig": "db/tsconfig.json"
+        }
+      },
+      "preset": "@shelf/jest-mongodb"
+    },
+    {
+      "displayName": "db@local",
+      "rootDir": "db",
+      "transform": {
+        "^.+\\.[tj]sx?$": "ts-jest"
+      },    
+      "globals": {
+        "ts-jest": {
+          "tsConfig": "db/tsconfig.json"
+        }
+      },
+      "testEnvironment": "node"    
+    }    
   ]
 }
