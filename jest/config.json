@@ -26,6 +26,18 @@
       }    
     },
     {
+      "displayName": "server",
+      "rootDir": "server",
+      "preset": "ts-jest",
+      "collectCoverageFrom": [
+        "<rootDir>"
+      ],
+      "transform": {
+        "^.+\\.[tj]sx?$": "ts-jest"
+      },
+      "testEnvironment": "node"
+    },
+    {
       "displayName": "db@memory",
       "rootDir": "db",
       "transform": {

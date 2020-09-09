@@ -3,8 +3,7 @@ import mongoose from 'mongoose'
 export {
   set,
   start,
-  clear,
-  stop
+  stop,
 }
 
 function set(opts: Record<string, unknown>) {
@@ -20,13 +19,6 @@ function start(url: string, config: mongoose.ConnectionOptions = {}) {
   )
 }
 
-async function clear() {
-  for (const collection of Object.values(mongoose.connection.collections))
-    await collection.deleteMany({})
-  return mongoose
-}
-
 function stop() {
   return mongoose.connection.close()
 }
-
