@@ -21,7 +21,7 @@ function getUrl(opts) {
     port = "",
     database = "",
     ...options
-  } = {...$default, ...opts}
+  } = mergeParams($default, opts)
   
 
   return `mongodb://${
@@ -38,4 +38,13 @@ function getUrl(opts) {
     //@ts-ignore
     new URLSearchParams(options)
   }`
+}
+
+function mergeParams(p1, p2) {
+  const $return = {...p2}
+  for (const key in p1)
+    if (!$return[key])
+      $return[key] = p1[key]
+  
+  return $return
 }
