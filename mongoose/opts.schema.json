@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "https://mongoosejs.com/docs/api.html#mongoose_Mongoose-set",
+  "type": "object",
+  "properties": {
+    "debug": {
+      "title": "If `true`, prints the operations mongoose sends to MongoDB to the console. If a writable stream is passed, it will log to that stream, without colorization. If a callback function is passed, it will receive the collection name, the method name, then all arugments passed to the method. For example, if you wanted to replicate the default logging, you could output from the callback `Mongoose: ${collectionName}.${methodName}(${methodArgs.join(', ')})`.",
+      "type": "boolean",
+      "examples": [
+        true
+      ]
+    },
+    "returnOriginal": {
+      "title": "Read our [findOneAndUpdate() tutorial](https://mongoosejs.com/docs/tutorials/findoneandupdate.html) for more information.",
+      "type": "string",
+      "examples": [
+        false
+      ]
+    },
+    "bufferCommands": {
+      "title": "enable/disable mongoose's buffering mechanism for all connections and models",
+      "examples": [
+        null
+      ]
+    },
+    "useCreateIndex": {
+      "title": "Set to `true` to make Mongoose's default index build use `createIndex()` instead of `ensureIndex()` to avoid deprecation warnings from the MongoDB driver.",
+      "default": false,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "useFindAndModify": {
+      "title": "Set to `false` to make `findOneAndUpdate()` and `findOneAndRemove()` use native `findOneAndUpdate()` rather than `findAndModify()`.",
+      "default": true,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "useNewUrlParser": {
+      "title": "Set to `true` to make all connections set the `useNewUrlParser` option by default",
+      "default": false,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "useUnifiedTopology": {
+      "title": "Set to `true` to make all connections set the `useUnifiedTopology` option by default",
+      "default": false,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "cloneSchemas": {
+      "title": "Set to `true` to `clone()` all schemas before compiling into a model.",
+      "default": false,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "applyPluginsToDiscriminators": {
+      "title": "Set to true to apply global plugins to discriminator schemas. This typically isn't necessary because plugins are applied to the base schema and discriminators copy all middleware, methods, statics, and properties from the base schema.",
+      "default": false,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "applyPluginsToChildSchemas": {
+      "title": "Set to false to skip applying global plugins to child schemas",
+      "default": true,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "objectIdGetter": {
+      "title": "Mongoose adds a getter to MongoDB ObjectId's called `_id` that returns `this` for convenience with populate. Set this to false to remove the getter.",
+      "default": true,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "runValidators": {
+      "title": "Set to true to enable [update validators](https://mongoosejs.com/docs/validation.html#update-validators) for all validators by default.",
+      "default": false,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "toObject": {
+      "title": "Overwrites default objects to [toObject()](https://mongoosejs.com/docs/api.html#document_Document-toObject)",
+      "default": {
+        "transform": true,
+        "flattenDecimals": true
+      },
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "toJSON": {
+      "title": "Overwrites default objects to [toJSON()](https://mongoosejs.com/docs/api.html#document_Document-toJSON), for determining how Mongoose documents get serialized by `JSON.stringify()`",
+      "default": {
+        "transform": true,
+        "flattenDecimals": true
+      },
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "strict": {
+      "title": "true by default, may be `false`, `true`, or `'throw'`. Sets the default strict mode for schemas.",
+      "examples": [
+        null
+      ]
+    },
+    "strictQuery": {
+      "title": "false by default, may be `false`, `true`, or `'throw'`. Sets the default [strictQuery](https://mongoosejs.com/docs/guide.html#strictQuery) mode for schemas.",
+      "examples": [
+        null
+      ]
+    },
+    "selectPopulatedPaths": {
+      "title": "Set to false to opt out of Mongoose adding all fields that you `populate()` to your `select()`. The schema-level option `selectPopulatedPaths` overwrites this one.",
+      "default": true,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    },
+    "typePojoToMixed": {
+      "title": "true by default, may be `false` or `true`. Sets the default typePojoToMixed for schemas.",
+      "examples": [
+        null
+      ]
+    },
+    "maxTimeMS": {
+      "title": "If set, attaches [maxTimeMS](https://docs.mongodb.com/manual/reference/operator/meta/maxTimeMS/) to every query",
+      "examples": [
+        null
+      ]
+    },
+    "autoIndex": {
+      "title": "Set to false to disable automatic index creation for all models associated with this Mongoose instance.",
+      "default": true,
+      "type": "string",
+      "examples": [
+        null
+      ]
+    }
+  }
+}

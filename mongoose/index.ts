@@ -6,7 +6,7 @@ export {
   stop,
 }
 
-function set(opts: Record<string, unknown>) {
+function set(opts: Record<string, string|boolean|Function>) {
   for (const key in opts)
     mongoose.set(key, opts[key])
   return mongoose
