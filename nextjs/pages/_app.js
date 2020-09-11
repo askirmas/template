@@ -1,5 +1,6 @@
 // import App from 'next/app'
 
+//@ts-ignore
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
