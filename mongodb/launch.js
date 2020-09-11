@@ -7,7 +7,7 @@ async function main() {
   const os = require('os')
   , childProcess = require('child_process')
   , act = process.argv[2]
-  
+
   let cmd = ""
   /** @type {string[]} */
   let args = []

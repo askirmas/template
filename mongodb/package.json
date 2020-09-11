@@ -1,0 +1,20 @@
+{
+  "name": "@kirmas/mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "mongodb": "./launch.js"
+  },
+  "scripts": {
+    "start": "./launch.js start",
+    "stop": "./launch.js stop",
+    "restart": "./launch.js restart"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mongodb": "^3.5.27",
+    "mongodb": "^3.6.2"
+  }
+}
