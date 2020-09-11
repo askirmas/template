@@ -13,6 +13,7 @@ function set(opts: Record<string, unknown>) {
 }
 
 function start(url: string, config: mongoose.ConnectionOptions = {}) {
+  console.info('DB connection starting')
   return mongoose.connect(
     url,
     config
@@ -20,5 +21,8 @@ function start(url: string, config: mongoose.ConnectionOptions = {}) {
 }
 
 function stop() {
+  console.info('DB connection Stopping')
   return mongoose.connection.close()
+  .then(() => console.info('DB connection stopped'))
+  .catch(err => (console.info('DB connection stop error', err), err))
 }
