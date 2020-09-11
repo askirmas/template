@@ -1,0 +1,6 @@
+{
+  "recommendations": [
+    "ms-azuretools.vscode-cosmosdb",
+    "mongodb.mongodb-vscode"
+  ]
+}
