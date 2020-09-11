@@ -1,7 +1,9 @@
 {
-  "name": "@kirmas/template-next",
+  "name": "@kirmas/nextjs",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "init": "./init.sh"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",
