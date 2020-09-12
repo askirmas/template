@@ -5,6 +5,9 @@
     },
     {
       "path": "mongodb"
+    },
+    {
+      "path": "./contracts"
     }
   ],
 	"settings": {

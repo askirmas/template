@@ -52,7 +52,7 @@
             "*.forever.*json"
           ],
           "url": "./forever.schema.json"
-        }    
+        }
     ],
     "files.watcherExclude": {
         "**/.git/objects/**": true,
