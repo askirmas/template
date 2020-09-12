@@ -1,0 +1,51 @@
+{
+  "setup": [
+    "git-hooks-wrapper init",
+    ";",
+    "git config include.path ../.gitconfig"
+  ],
+  "test": {
+    "test": "all test/*",
+    "/db": {
+      "": "1/@memory",
+      "@memory": "jest#100 -- --selectProjects db@memory",
+      "@local": {
+        "^": "mongo.start",
+        "=": "jest#100 -- --selectProjects db@local"
+      }
+    },
+    "/server": {
+      "^": "server.start",
+      "=": "jest# -- --selectProjects server",
+      "$": "server.stop"
+    },
+    "/contracts": "npm run jest# -- --selectProjects contracts"
+  },
+  "server": {
+    "": "ts-node-script server",
+    ".dev": {
+      "^": "mongodb.start",
+      "=": "ts-node-dev --script-mode server"
+    },
+    ".start": {
+      "^": "mongodb.start",
+      "=": "forever start server/dev.forever.json"
+    },
+    ".stop": {
+      "=": "forever stop $(jq -r '.uid' server/dev.forever.json)",
+      "$": "mongodb.stop"
+    }
+  },
+  "jest": {
+    "#": "jest --runInBand --config jest.json",
+    "#100": "jest# -- --coverageThreshold '$(cat coverage.json)"
+  },
+  "next": {
+    ".init": "npm explore @kirmas/nextjs -- npm run init",
+    ".dev": "next",
+    ".build": "next build && next export"
+  },
+  "mongodb": {
+    ".{cmd:start,stop,restart}": "mongodb {cmd}"
+  }
+}
