@@ -1,5 +1,7 @@
 # Jest Helpers
 
+`npm install --save-dev @kirmas/jest`
+
 ## [`toMatchSchema`](https://www.npmjs.com/package/jest-json-schema) names hints
 
 To use names of added schemas you need to 'overload' jest's `expect`. Examples of usage:
