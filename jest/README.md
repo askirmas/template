@@ -22,7 +22,7 @@ it('ordinary', () => expect(
   $ref:"third" // Type notation from `@types/jest-json-schema`
 }))
 
-it('ordinary', () => expect(
+it('enforced schema names', () => expect(
 	data
 ).toMatchSchema<1>({ // TypeScript takes overloaded method notation with permitted `"first"|"second" === keyof typeof schemas`
   //@ts-expect-error
