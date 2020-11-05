@@ -15,6 +15,14 @@
   "testEnvironment": "node",
   "projects": [
     {
+      "displayName": "utils",
+      "rootDir": "utils",
+      "preset": "ts-jest/presets/js-with-ts",
+      "collectCoverageFrom": [
+        "<rootDir>"
+      ]
+    },
+    {
       "displayName": "functions",
       "rootDir": "functions",
       "preset": "ts-jest/presets/js-with-ts",
