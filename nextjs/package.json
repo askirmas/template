@@ -11,7 +11,7 @@
     "@types/react": "^16.9.43",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
-    "next": "9.3.6",
+    "next": "12.1.0",
     "next-images": "^1.4.0",
     "node-sass-json-importer": "^4.3.0",
     "react": "^16.13.1",
